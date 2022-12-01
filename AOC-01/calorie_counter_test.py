@@ -20,3 +20,9 @@ class TestCalorieCounter(unittest.TestCase):
         calorie_list = calorie_counter.get_calories('data/test_calories.txt')
         result = calorie_counter.get_highest_calorie_count(calorie_list)
         self.assertEqual(result, 24000)
+
+    def test_get_total_of_top_three_elf_calories_from_calorie_file(self):
+        calorie_list = calorie_counter.get_calories('data/test_calories.txt')
+        result = calorie_counter.get_sum_of_top_three_calorie_counts(calorie_list)
+        self.assertEqual(result, 45000)
+

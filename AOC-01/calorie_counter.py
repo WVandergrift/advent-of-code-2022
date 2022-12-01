@@ -24,3 +24,9 @@ def get_highest_calorie_count(calorie_list):
         if cur_calories > max_calories:
             max_calories = cur_calories
     return max_calories
+
+
+def get_sum_of_top_three_calorie_counts(calorie_list):
+    elf_totals = [sum(calorie_list[elf]) for elf in calorie_list]
+    elf_totals.sort(reverse=True)
+    return sum(elf_totals[:3])
